@@ -274,6 +274,7 @@
             this.Controls.Add(this.chk_login);
             this.Controls.Add(this.chk_pwd);
             this.DoubleClickMaximized = false;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaxBox.HoverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
             this.MaxBox.NormalColor = System.Drawing.Color.White;
             this.MaxBox.PressBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
