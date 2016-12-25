@@ -42,7 +42,7 @@
             this.lblLevel = new DSkin.Controls.DSkinLabel();
             this.lblBamBoom = new DSkin.Controls.DSkinLabel();
             this.lblMsg = new DSkin.Controls.DSkinLabel();
-            this.lblNickName = new DSkin.Controls.DSkinLabel();
+            this.lbl_username = new DSkin.Controls.DSkinLabel();
             this.imgHead = new DSkin.Controls.DSkinPictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.ListShow)).BeginInit();
             this.SuspendLayout();
@@ -257,15 +257,15 @@
             this.lblMsg.TabIndex = 25;
             this.lblMsg.Text = "Wslink首发版本公测";
             // 
-            // lblNickName
+            // lbl_username
             // 
-            this.lblNickName.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.lblNickName.ForeColor = System.Drawing.Color.White;
-            this.lblNickName.Location = new System.Drawing.Point(64, 47);
-            this.lblNickName.Name = "lblNickName";
-            this.lblNickName.Size = new System.Drawing.Size(34, 18);
-            this.lblNickName.TabIndex = 26;
-            this.lblNickName.Text = "arlen";
+            this.lbl_username.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.lbl_username.ForeColor = System.Drawing.Color.White;
+            this.lbl_username.Location = new System.Drawing.Point(64, 47);
+            this.lbl_username.Name = "lbl_username";
+            this.lbl_username.Size = new System.Drawing.Size(34, 18);
+            this.lbl_username.TabIndex = 26;
+            this.lbl_username.Text = "arlen";
             // 
             // imgHead
             // 
@@ -300,7 +300,7 @@
             this.Controls.Add(this.lblLevel);
             this.Controls.Add(this.lblBamBoom);
             this.Controls.Add(this.lblMsg);
-            this.Controls.Add(this.lblNickName);
+            this.Controls.Add(this.lbl_username);
             this.Controls.Add(this.imgHead);
             this.DoubleClickMaximized = false;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -317,6 +317,7 @@
             this.NormalBox.PressBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
             this.Text = "无声物联客户端";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmRight_FormClosing);
+            this.Load += new System.EventHandler(this.FrmRight_Load);
             ((System.ComponentModel.ISupportInitialize)(this.ListShow)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -338,7 +339,7 @@
         private DSkin.Controls.DSkinLabel lblLevel;
         private DSkin.Controls.DSkinLabel lblBamBoom;
         private DSkin.Controls.DSkinLabel lblMsg;
-        private DSkin.Controls.DSkinLabel lblNickName;
+        private DSkin.Controls.DSkinLabel lbl_username;
         private DSkin.Controls.DSkinPictureBox imgHead;
     }
 }

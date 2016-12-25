@@ -6,6 +6,8 @@ using System.Windows.Forms;
 
 namespace WsLinkPC
 {
+
+    
     static class Program
     {
         /// <summary>
@@ -14,9 +16,17 @@ namespace WsLinkPC
         [STAThread]
         static void Main()
         {
+            Init();
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new FrmLogin());
+        }
+
+        /// <summary>
+        /// 程序初始化
+        /// </summary>
+        private static void Init()
+        {
         }
     }
 }

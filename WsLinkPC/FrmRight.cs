@@ -22,5 +22,15 @@ namespace WsLinkPC
         {
             Application.Exit();
         }
+
+        private void FrmRight_Load(object sender, EventArgs e)
+        {
+            Init();
+        }
+
+        private void Init()
+        {
+            lbl_username.Text = Account.User.Name;
+        }
     }
 }
