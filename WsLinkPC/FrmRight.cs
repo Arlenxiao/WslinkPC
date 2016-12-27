@@ -80,8 +80,13 @@ namespace WsLinkPC
         {
             if (_main != null) _main.MoveForm();
         }
+
         #endregion
 
-
+        private void lblMenu_Click(object sender, EventArgs e)
+        {
+            Main.Owner = this;
+            Main.Show();
+        }
     }
 }

@@ -45,5 +45,19 @@ namespace WsLinkPC
         }
 
         #endregion
+
+        private void FrmLeft_LocationChanged(object sender, EventArgs e)
+        {
+            if (RMain != null)
+            {
+                RMain.Top = this.Top;
+                RMain.Left = this.Left + this.Width - 1;
+            }
+        }
+
+        private void FrmLeft_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            RMain.Main = null;
+        }
     }
 }

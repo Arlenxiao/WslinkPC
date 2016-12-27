@@ -28,7 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmLeft));
+            this.dSkinUserControl1 = new DSkin.Controls.DSkinUserControl();
             this.SuspendLayout();
+            // 
+            // dSkinUserControl1
+            // 
+            this.dSkinUserControl1.BackColor = System.Drawing.Color.Transparent;
+            this.dSkinUserControl1.BitmapCache = false;
+            this.dSkinUserControl1.Location = new System.Drawing.Point(770, 446);
+            this.dSkinUserControl1.Name = "dSkinUserControl1";
+            this.dSkinUserControl1.RightBottom = ((System.Drawing.Image)(resources.GetObject("dSkinUserControl1.RightBottom")));
+            this.dSkinUserControl1.Size = new System.Drawing.Size(150, 150);
+            this.dSkinUserControl1.TabIndex = 0;
             // 
             // FrmLeft
             // 
@@ -39,6 +51,7 @@
             this.CloseBox.HoverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
             this.CloseBox.NormalColor = System.Drawing.Color.White;
             this.CloseBox.PressBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.Controls.Add(this.dSkinUserControl1);
             this.DoubleClickMaximized = false;
             this.DrawIcon = false;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -57,11 +70,15 @@
             this.ShowInTaskbar = false;
             this.ShowShadow = false;
             this.Text = "常用设备";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FrmLeft_FormClosed);
             this.Load += new System.EventHandler(this.FrmLeft_Load);
+            this.LocationChanged += new System.EventHandler(this.FrmLeft_LocationChanged);
             this.ResumeLayout(false);
 
         }
 
         #endregion
+
+        private DSkin.Controls.DSkinUserControl dSkinUserControl1;
     }
 }

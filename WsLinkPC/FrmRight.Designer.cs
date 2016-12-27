@@ -188,6 +188,7 @@
             this.lblMenu.Size = new System.Drawing.Size(29, 18);
             this.lblMenu.TabIndex = 22;
             this.lblMenu.Text = "菜单";
+            this.lblMenu.Click += new System.EventHandler(this.lblMenu_Click);
             // 
             // lbl_offline
             // 
