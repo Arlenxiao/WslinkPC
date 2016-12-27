@@ -137,6 +137,7 @@
             this.txt_password.WaterFont = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.txt_password.WaterText = "请输入密码";
             this.txt_password.WaterTextOffset = new System.Drawing.Point(0, 0);
+            this.txt_password.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txt_password_KeyUp);
             // 
             // duiPictureBox1
             // 

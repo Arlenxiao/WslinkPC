@@ -16,5 +16,10 @@ namespace WsLinkPC
         /// </summary>
         public static User User = new User();
 
+        /// <summary>
+        /// 设备数据
+        /// </summary>
+        public static List<DeviceItem> Devices = new List<DeviceItem>();
+
     }
 }

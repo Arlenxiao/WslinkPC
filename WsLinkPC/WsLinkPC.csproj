@@ -59,6 +59,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Account.cs" />
+    <Compile Include="DevicesResult.cs" />
+    <Compile Include="FrmLeft.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmLeft.Designer.cs">
+      <DependentUpon>FrmLeft.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -71,10 +78,15 @@
     <Compile Include="FrmRight.Designer.cs">
       <DependentUpon>FrmRight.cs</DependentUpon>
     </Compile>
+    <Compile Include="IResult.cs" />
     <Compile Include="JsonHelp.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="User.cs" />
+    <Compile Include="LoninResult.cs" />
+    <EmbeddedResource Include="FrmLeft.resx">
+      <DependentUpon>FrmLeft.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmLogin.resx">
       <DependentUpon>FrmLogin.cs</DependentUpon>
     </EmbeddedResource>

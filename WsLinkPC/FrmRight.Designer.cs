@@ -36,14 +36,14 @@
             this.dSkinButton2 = new DSkin.Controls.DSkinButton();
             this.dSkinButton1 = new DSkin.Controls.DSkinButton();
             this.dSkinPictureBox3 = new DSkin.Controls.DSkinPictureBox();
-            this.btnSx = new DSkin.Controls.DSkinButton();
-            this.dSkinPictureBox2 = new DSkin.Controls.DSkinPictureBox();
+            this.pic_offline = new DSkin.Controls.DSkinPictureBox();
             this.lblMenu = new DSkin.Controls.DSkinLabel();
-            this.lblLevel = new DSkin.Controls.DSkinLabel();
-            this.lblBamBoom = new DSkin.Controls.DSkinLabel();
+            this.lbl_offline = new DSkin.Controls.DSkinLabel();
             this.lblMsg = new DSkin.Controls.DSkinLabel();
             this.lbl_username = new DSkin.Controls.DSkinLabel();
             this.imgHead = new DSkin.Controls.DSkinPictureBox();
+            this.lbl_online = new DSkin.Controls.DSkinLabel();
+            this.pic_online = new DSkin.Controls.DSkinPictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.ListShow)).BeginInit();
             this.SuspendLayout();
             // 
@@ -52,7 +52,7 @@
             this.ListShow.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
             this.ListShow.ContainerAutoSize = false;
             this.ListShow.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.ListShow.Location = new System.Drawing.Point(5, 139);
+            this.ListShow.Location = new System.Drawing.Point(4, 139);
             this.ListShow.Name = "ListShow";
             this.ListShow.ScrollBarWidth = 12;
             this.ListShow.Size = new System.Drawing.Size(274, 461);
@@ -165,43 +165,18 @@
             this.dSkinPictureBox3.TabIndex = 29;
             this.dSkinPictureBox3.Text = "dSkinPictureBox3";
             // 
-            // btnSx
+            // pic_offline
             // 
-            this.btnSx.AdaptImage = true;
-            this.btnSx.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(89)))), ((int)(((byte)(108)))));
-            this.btnSx.ButtonBorderColor = System.Drawing.Color.Transparent;
-            this.btnSx.ButtonBorderWidth = 0;
-            this.btnSx.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btnSx.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(216)))), ((int)(((byte)(219)))));
-            this.btnSx.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(106)))), ((int)(((byte)(125)))));
-            this.btnSx.HoverImage = null;
-            this.btnSx.IsPureColor = true;
-            this.btnSx.Location = new System.Drawing.Point(183, 52);
-            this.btnSx.Name = "btnSx";
-            this.btnSx.NormalImage = null;
-            this.btnSx.PressColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(82)))), ((int)(((byte)(100)))));
-            this.btnSx.PressedImage = null;
-            this.btnSx.Radius = 4;
-            this.btnSx.ShowButtonBorder = true;
-            this.btnSx.Size = new System.Drawing.Size(93, 35);
-            this.btnSx.TabIndex = 28;
-            this.btnSx.Text = "刷新资料";
-            this.btnSx.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnSx.TextPadding = 0;
-            this.btnSx.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
-            // 
-            // dSkinPictureBox2
-            // 
-            this.dSkinPictureBox2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("dSkinPictureBox2.BackgroundImage")));
-            this.dSkinPictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.dSkinPictureBox2.Image = null;
-            this.dSkinPictureBox2.Images = null;
-            this.dSkinPictureBox2.Interval = 40;
-            this.dSkinPictureBox2.Location = new System.Drawing.Point(105, 71);
-            this.dSkinPictureBox2.Name = "dSkinPictureBox2";
-            this.dSkinPictureBox2.Size = new System.Drawing.Size(20, 18);
-            this.dSkinPictureBox2.TabIndex = 27;
-            this.dSkinPictureBox2.Text = "dSkinPictureBox2";
+            this.pic_offline.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pic_offline.BackgroundImage")));
+            this.pic_offline.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.pic_offline.Image = null;
+            this.pic_offline.Images = null;
+            this.pic_offline.Interval = 40;
+            this.pic_offline.Location = new System.Drawing.Point(122, 72);
+            this.pic_offline.Name = "pic_offline";
+            this.pic_offline.Size = new System.Drawing.Size(20, 18);
+            this.pic_offline.TabIndex = 27;
+            this.pic_offline.Text = "dSkinPictureBox2";
             // 
             // lblMenu
             // 
@@ -214,33 +189,15 @@
             this.lblMenu.TabIndex = 22;
             this.lblMenu.Text = "菜单";
             // 
-            // lblLevel
+            // lbl_offline
             // 
-            this.lblLevel.AutoSize = false;
-            this.lblLevel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(150)))), ((int)(((byte)(255)))));
-            this.lblLevel.DuiBackgroundRender.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(55)))), ((int)(((byte)(70)))));
-            this.lblLevel.DuiBackgroundRender.Radius = 4;
-            this.lblLevel.DuiBackgroundRender.RenderBorders = true;
-            this.lblLevel.EffectColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(124)))), ((int)(((byte)(210)))));
-            this.lblLevel.Font = new System.Drawing.Font("微软雅黑", 7F);
-            this.lblLevel.ForeColor = System.Drawing.Color.White;
-            this.lblLevel.Location = new System.Drawing.Point(64, 72);
-            this.lblLevel.Name = "lblLevel";
-            this.lblLevel.Size = new System.Drawing.Size(35, 15);
-            this.lblLevel.TabIndex = 23;
-            this.lblLevel.Text = "LV  10";
-            this.lblLevel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lblLevel.TextEffect = DSkin.DirectUI.TextEffects.Glow;
-            // 
-            // lblBamBoom
-            // 
-            this.lblBamBoom.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.lblBamBoom.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(184)))), ((int)(((byte)(0)))));
-            this.lblBamBoom.Location = new System.Drawing.Point(131, 72);
-            this.lblBamBoom.Name = "lblBamBoom";
-            this.lblBamBoom.Size = new System.Drawing.Size(26, 18);
-            this.lblBamBoom.TabIndex = 24;
-            this.lblBamBoom.Text = "520";
+            this.lbl_offline.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.lbl_offline.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(184)))), ((int)(((byte)(0)))));
+            this.lbl_offline.Location = new System.Drawing.Point(148, 72);
+            this.lbl_offline.Name = "lbl_offline";
+            this.lbl_offline.Size = new System.Drawing.Size(12, 18);
+            this.lbl_offline.TabIndex = 24;
+            this.lbl_offline.Text = "0";
             // 
             // lblMsg
             // 
@@ -282,23 +239,46 @@
             this.imgHead.TabIndex = 21;
             this.imgHead.Text = "dSkinPictureBox1";
             // 
+            // lbl_online
+            // 
+            this.lbl_online.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.lbl_online.ForeColor = System.Drawing.Color.Green;
+            this.lbl_online.Location = new System.Drawing.Point(91, 72);
+            this.lbl_online.Name = "lbl_online";
+            this.lbl_online.Size = new System.Drawing.Size(12, 18);
+            this.lbl_online.TabIndex = 33;
+            this.lbl_online.Text = "0";
+            // 
+            // pic_online
+            // 
+            this.pic_online.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pic_online.BackgroundImage")));
+            this.pic_online.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.pic_online.Image = null;
+            this.pic_online.Images = null;
+            this.pic_online.Interval = 40;
+            this.pic_online.Location = new System.Drawing.Point(65, 72);
+            this.pic_online.Name = "pic_online";
+            this.pic_online.Size = new System.Drawing.Size(20, 18);
+            this.pic_online.TabIndex = 34;
+            this.pic_online.Text = "dSkinPictureBox1";
+            // 
             // FrmRight
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 666);
+            this.ClientSize = new System.Drawing.Size(284, 660);
             this.CloseBox.HoverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
             this.CloseBox.NormalColor = System.Drawing.Color.White;
             this.CloseBox.PressBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.Controls.Add(this.pic_online);
+            this.Controls.Add(this.lbl_online);
             this.Controls.Add(this.ListShow);
             this.Controls.Add(this.dSkinButton2);
             this.Controls.Add(this.dSkinButton1);
             this.Controls.Add(this.dSkinPictureBox3);
-            this.Controls.Add(this.btnSx);
-            this.Controls.Add(this.dSkinPictureBox2);
+            this.Controls.Add(this.pic_offline);
             this.Controls.Add(this.lblMenu);
-            this.Controls.Add(this.lblLevel);
-            this.Controls.Add(this.lblBamBoom);
+            this.Controls.Add(this.lbl_offline);
             this.Controls.Add(this.lblMsg);
             this.Controls.Add(this.lbl_username);
             this.Controls.Add(this.imgHead);
@@ -318,6 +298,7 @@
             this.Text = "无声物联客户端";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmRight_FormClosing);
             this.Load += new System.EventHandler(this.FrmRight_Load);
+            this.LocationChanged += new System.EventHandler(this.FrmRight_LocationChanged);
             ((System.ComponentModel.ISupportInitialize)(this.ListShow)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -333,13 +314,13 @@
         private DSkin.Controls.DSkinButton dSkinButton2;
         private DSkin.Controls.DSkinButton dSkinButton1;
         private DSkin.Controls.DSkinPictureBox dSkinPictureBox3;
-        private DSkin.Controls.DSkinButton btnSx;
-        private DSkin.Controls.DSkinPictureBox dSkinPictureBox2;
+        private DSkin.Controls.DSkinPictureBox pic_offline;
         private DSkin.Controls.DSkinLabel lblMenu;
-        private DSkin.Controls.DSkinLabel lblLevel;
-        private DSkin.Controls.DSkinLabel lblBamBoom;
+        private DSkin.Controls.DSkinLabel lbl_offline;
         private DSkin.Controls.DSkinLabel lblMsg;
         private DSkin.Controls.DSkinLabel lbl_username;
         private DSkin.Controls.DSkinPictureBox imgHead;
+        private DSkin.Controls.DSkinLabel lbl_online;
+        private DSkin.Controls.DSkinPictureBox pic_online;
     }
 }

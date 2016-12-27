@@ -13,6 +13,30 @@ namespace WsLinkPC
 {
     public partial class FrmRight : Skin_VS_Dark
     {
+
+        #region 属性
+        /// <summary>
+        /// 左边窗体
+        /// </summary>
+        private FrmLeft _main = null;
+        /// <summary>
+        /// 左边窗体
+        /// </summary>
+        public FrmLeft Main
+        {
+            get
+            {
+                if (_main == null) _main = new FrmLeft(this);
+                return _main;
+            }
+            set
+            {
+                _main = value;
+            }
+        }
+        #endregion
+
+        #region 窗体加载
         public FrmRight()
         {
             InitializeComponent();
@@ -23,14 +47,41 @@ namespace WsLinkPC
             Application.Exit();
         }
 
+
         private void FrmRight_Load(object sender, EventArgs e)
         {
+            Left += Width;
             Init();
         }
 
         private void Init()
         {
-            lbl_username.Text = Account.User.Name;
+            var rs = IResult.GetDevices();
+            if (rs.result)
+            {
+                Account.Devices = rs.data;
+
+                var online = Account.Devices.Count(m => m.Status);
+                var offline = Account.Devices.Count(m => !m.Status);
+
+                lbl_online.Text = online.ToString();
+                lbl_offline.Text = offline.ToString();
+            }
+
+            lbl_username.Text = string.Format("{0} {1}", Account.User.Name, Account.User.DisplayName);
+
+            Main.Owner = this;
+            Main.Show();
         }
+        #endregion
+
+        #region 左窗体跟随事件
+        private void FrmRight_LocationChanged(object sender, EventArgs e)
+        {
+            if (_main != null) _main.MoveForm();
+        }
+        #endregion
+
+
     }
 }
