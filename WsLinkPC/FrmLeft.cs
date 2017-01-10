@@ -32,6 +32,8 @@ namespace WsLinkPC
 
         private void FrmLeft_Load(object sender, EventArgs e)
         {
+            LoadDevices();
+
             MoveForm();
         }
 
@@ -44,7 +46,7 @@ namespace WsLinkPC
             this.Left = RMain.Left - this.Width + 1;
         }
 
-        #endregion
+
 
         private void FrmLeft_LocationChanged(object sender, EventArgs e)
         {
@@ -59,5 +61,33 @@ namespace WsLinkPC
         {
             RMain.Main = null;
         }
+        #endregion
+
+        #region
+        private void LoadDevices()
+        {
+            var img_0 = Properties.Resources.device_0203_64;
+            var img_1 = Properties.Resources.device_0203_64_off;
+            foreach (var item in Account.Devices)
+            {
+                var v = new Dev_020X(item);
+                v.lblTitle.Text = item.Name;
+                v.lblUser.Text = item.Labels;
+                v.dev_on_off.ForeColor = item.Status ? Color.Green : Color.Gray;
+                //v.sw_0.BackgroundImageLayout = ImageLayout.Stretch;
+                //v.sw_1.BackgroundImageLayout = ImageLayout.Stretch;
+                //v.sw_2.BackgroundImageLayout = ImageLayout.Stretch;
+                v.sw_0.BackgroundImage = img_0;
+                v.sw_1.BackgroundImage = img_1;
+                v.sw_2.BackgroundImage = img_0;
+
+
+                this.Invoke(new MethodInvoker(delegate
+                {
+                    list_Devices.Items.Add(v);
+                }));
+            }
+        }
+        #endregion
     }
 }

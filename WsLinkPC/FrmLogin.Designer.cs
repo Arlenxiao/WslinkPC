@@ -53,7 +53,8 @@
             this.txt_username.Location = new System.Drawing.Point(39, 9);
             this.txt_username.Name = "txt_username";
             this.txt_username.Size = new System.Drawing.Size(151, 16);
-            this.txt_username.TabIndex = 0;
+            this.txt_username.TabIndex = 1;
+            this.txt_username.Text = "wswl";
             this.txt_username.TransparencyKey = System.Drawing.Color.Empty;
             this.txt_username.WaterColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(139)))), ((int)(((byte)(139)))));
             this.txt_username.WaterFont = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
@@ -131,7 +132,8 @@
             this.txt_password.Name = "txt_password";
             this.txt_password.PasswordChar = '●';
             this.txt_password.Size = new System.Drawing.Size(151, 16);
-            this.txt_password.TabIndex = 1;
+            this.txt_password.TabIndex = 0;
+            this.txt_password.Text = "123456";
             this.txt_password.TransparencyKey = System.Drawing.Color.Empty;
             this.txt_password.WaterColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(139)))), ((int)(((byte)(139)))));
             this.txt_password.WaterFont = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));

@@ -59,6 +59,18 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Account.cs" />
+    <Compile Include="Controls\Dev_020X.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Dev_020X.Designer.cs">
+      <DependentUpon>Dev_020X.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Dev_027X.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Dev_027X.Designer.cs">
+      <DependentUpon>Dev_027X.cs</DependentUpon>
+    </Compile>
     <Compile Include="DevicesResult.cs" />
     <Compile Include="FrmLeft.cs">
       <SubType>Form</SubType>
@@ -84,6 +96,12 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="User.cs" />
     <Compile Include="LoninResult.cs" />
+    <EmbeddedResource Include="Controls\Dev_020X.resx">
+      <DependentUpon>Dev_020X.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Dev_027X.resx">
+      <DependentUpon>Dev_027X.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmLeft.resx">
       <DependentUpon>FrmLeft.cs</DependentUpon>
     </EmbeddedResource>
@@ -101,6 +119,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -118,6 +137,8 @@
     <Content Include="DLL\DSkin.XML" />
     <Content Include="DLL\更新文档.txt" />
     <Content Include="icon.ico" />
+    <None Include="Resources\device_0203_64_off.png" />
+    <None Include="Resources\device_0203_64.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
