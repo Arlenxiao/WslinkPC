@@ -59,6 +59,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Account.cs" />
+    <Compile Include="Controls\Dev_0201.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Dev_0201.Designer.cs">
+      <DependentUpon>Dev_0201.cs</DependentUpon>
+    </Compile>
     <Compile Include="Controls\Dev_020X.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -72,6 +78,7 @@
       <DependentUpon>Dev_027X.cs</DependentUpon>
     </Compile>
     <Compile Include="DevicesResult.cs" />
+    <Compile Include="ErrorResult.cs" />
     <Compile Include="FrmLeft.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -96,6 +103,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="User.cs" />
     <Compile Include="LoninResult.cs" />
+    <Compile Include="WriteResult.cs" />
     <EmbeddedResource Include="Controls\Dev_020X.resx">
       <DependentUpon>Dev_020X.cs</DependentUpon>
     </EmbeddedResource>

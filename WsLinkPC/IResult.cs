@@ -99,5 +99,42 @@ namespace WsLinkPC
                 return new DevicesResult { result = false };
             }
         }
+
+        public static dynamic Write(String id, Int32 start, String data)
+        {
+            //http://yun.wslink.cn/Api/Write/0273487E8C15?start=1&data=010001
+            var url = string.Format("Api/Write/{0}?start={1}&data={2}", id, start, data);
+
+            var response = client.GetAsync(url).Result;
+            if (response.IsSuccessStatusCode)
+            {
+                try
+                {
+                    string result = string.Empty;
+                    var rs = response.Content.ReadAsStreamAsync().Result;
+                    using (var sr = new StreamReader(rs, Encoding.UTF8))
+                    {
+                        result = sr.ReadToEnd();
+                        rs.Close();
+                    }
+
+                    if (string.IsNullOrEmpty(result)) return new ErrorResult { result = false };
+
+                    //返回错误结果
+                    if (result.Contains("error")) return JsonHelp.JsonDeserialize<ErrorResult>(result);
+
+                    return JsonHelp.JsonDeserialize<WriteResult>(result);
+                }
+                catch
+                {
+                    return new ErrorResult { result = false };
+                }
+            }
+            else
+            {
+                Console.WriteLine("{0} ({1})", (int)response.StatusCode, response.ReasonPhrase);
+                return new ErrorResult { result = false };
+            }
+        }
     }
 }
